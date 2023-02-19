@@ -1,0 +1,53 @@
+import 'dart:io';
+
+void main() { 
+//1
+  print("Cong"); 
+//2
+  print("Hello I am \"Cong\"");
+//3
+  int a=7;
+//4
+  int p=5,t=4,r=100;
+  double S=(p * t * r) / 100;
+  print("$S");
+//5  
+  print("Nhap 1 so:");
+  int? n = int.parse(stdin.readLineSync()!);
+  print("Binh phuong cua ${n} la ${n*n}");
+//6
+  print("Nhap ho:");
+  String? prename  = stdin.readLineSync();
+  print("Nhap ten:");
+  String? name  = stdin.readLineSync();
+  print("Ho va ten: $prename $name");
+//7
+ print("Thuong cua $p va $t la ${p/t}, So du la ${p%t}");
+//8
+  print("Nhap vao 2 so:");
+  int? a1 = int.parse(stdin.readLineSync()!);
+  int? a2 = int.parse(stdin.readLineSync()!);
+  doicho(a1,a2); 
+//9
+  String str3=" Hello  wo rld";
+  print(str3.replaceAll(' ',''));
+//10
+  String str="123456";
+  int str2=int.parse(str);
+  print("$str2");
+//11
+  tinhtien();
+} 
+void doi(int a, int b){
+ int tg=a;
+ a=b;
+ b=tg;
+ print("$a, $b");
+}
+void tinhtien(){
+  print("Nhap tong so tien: ");
+  double? s = double.parse(stdin.readLineSync()!);
+  print("Nhap so nguoi: ");
+  int? n = int.parse(stdin.readLineSync()!);
+  print("So tien cua moi nguoi la: ${s/n}");
+}
