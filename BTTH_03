@@ -1,0 +1,46 @@
+import 'dart:math';
+void main(){
+//1
+    inTen();
+//2
+    soChan(5,10);
+//3 
+    int random = 100000 + Random().nextInt((999999 + 1) - 100000);
+    print("Mat khau ngau nhien gom 6 so: $random");
+//4
+    dtHinhTron(5);
+//5
+    dlPytago(3,4);
+//6
+    daoNguoc("Anhyeuem");
+//7
+    luyThua(5,2);
+}
+void inTen(){
+    print("Cong");
+}
+void soChan(int a, int b){
+    if(a>b){
+        int tg=a;
+        a=b;
+        b=tg;  
+    }
+    for(int i=a;i<=b;i++){
+            if(i%2==0){
+                print("$i");
+            }
+        }  
+}
+ void dtHinhTron(int r){
+    print("Dien tich hinh tron voi BK $r la ${3.14*r*r}");
+ }
+void dlPytago(int a, int b){
+    double c=sqrt(a*a+b*b);
+    print("Do dai canh huyen: $c");
+}
+void luyThua(int a, int b){
+    print("${pow(a,b)}");
+}void daoNguoc(String a){
+    print("Chuoi vua nhap la: $a"); 
+    print(a.reverse);
+    }
