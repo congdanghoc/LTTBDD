@@ -3,8 +3,7 @@ void main(){
   //1
     ktchanle(6);
   //2
-   String str="b";
-    ktkitu(str);
+    ktkitu("b");
   //3 
     ktamduong(5.5);
   //4
@@ -25,7 +24,7 @@ void main(){
     //8
     print("Nhap so t1:");
     int? a1 = int.parse(stdin.readLineSync()!);
-    print("Nhap so t1:");
+    print("Nhap so t2:");
     int? a2 = int.parse(stdin.readLineSync()!);
     print("Nhap phep tinh(+,-,x,/):");
     String? s  = stdin.readLineSync();
@@ -39,7 +38,6 @@ void main(){
       print(i);
     }
     }
-
 }
 void ktchanle(int n){
     if(n%2==0){ print("$n la so chan");
