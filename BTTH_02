@@ -1,0 +1,82 @@
+import 'dart:io';
+void main(){
+  //1
+    ktchanle(6);
+  //2
+   String str="b";
+    ktkitu(str);
+  //3 
+    ktamduong(5.5);
+  //4
+    lap("cong");
+  //5
+    sum(10);
+  //6
+    for(int i=1;i<=10;i++){
+      print("5 * $i = ${5*i}");
+    }
+    //7
+    for(int i=1;i<=9;i++){
+      for(int j=1;j<=10;j++){
+        print("$i * $j = ${i*j}");
+      }
+      print("\n");
+    }
+    //8
+    print("Nhap so t1:");
+    int? a1 = int.parse(stdin.readLineSync()!);
+    print("Nhap so t1:");
+    int? a2 = int.parse(stdin.readLineSync()!);
+    print("Nhap phep tinh(+,-,x,/):");
+    String? s  = stdin.readLineSync();
+    if(s=="+"){print("KQ: $a1 + $a2 = ${a1+a2}");}
+    if(s=="-"){print("KQ: $a1 - $a2 = ${a1-a2}");}
+    if(s=="x"){print("KQ: $a1 x $a2 = ${a1*a2}");}
+    if(s=="/"){print("KQ: $a1 / $a2 = ${a1/a2}");}
+    //9
+    for (int i=0;i<100;i++){
+      if(i!=41){
+      print(i);
+    }
+    }
+
+}
+void ktchanle(int n){
+    if(n%2==0){ print("$n la so chan");
+    }
+    else{ print("$n la so le");
+    }
+}
+void ktkitu(String str){
+    if(str == "a" || str == "e" || str=="u" || str=="a" || str == "o" || str =="i"){
+      print("$str la 1 nguyen am");
+    }
+    else{
+      print("$str la 1 phu am");
+    }
+}
+void ktamduong(double n ){
+  if(n>0){
+    print("$n la so duong");
+  }
+  else if(n<0){
+    print("$n la so am");
+  }
+  else {
+    print("$n la so 0");
+  }
+  }
+void lap(String str){
+  for(int i=0;i<=100;i++){
+    print("$str ");
+  }
+  
+}
+void sum(int n){
+  int s=0;
+    //print("${(n*(n+1))/2}");
+    for(int i =0;i<=n;i++){
+     s+=i;
+    } print("$s");
+  }
+
