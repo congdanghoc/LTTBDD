@@ -40,7 +40,11 @@ void dlPytago(int a, int b){
 }
 void luyThua(int a, int b){
     print("${pow(a,b)}");
-}void daoNguoc(String a){
-    print("Chuoi vua nhap la: $a"); 
-    print(a.reverse);
+}
+void daoNguoc(String str){
+    String reversedStr = "";
+    for (int i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];
+  }
+  return reversedStr;
     }
