@@ -1,0 +1,31 @@
+import 'dart:io';
+
+void main() {
+  List<String> DS = [];
+
+  while (true) {
+    stdout.write('Mời nhập (add/remove/view/quit): ');
+    String command = stdin.readLineSync()!;
+
+    if (command == 'add') {
+      stdout.write('Nhập vào DS: ');
+      String task = stdin.readLineSync()!;
+      DS.add(task);
+    } else if (command == 'remove') {
+      stdout.write('Nhập vào DS: ');
+      String task = stdin.readLineSync()!;
+      DS.remove(task);
+    } else if (command == 'view') {
+      if (DS.isEmpty) {
+        print('DS rỗng.');
+      } else {
+        print('DS:');
+        DS.forEach((task) => print('- $task'));
+      }
+    } else if (command == 'quit') {
+      break;
+    } else {
+      print('Không hợp lệ.');
+    }
+  }
+}

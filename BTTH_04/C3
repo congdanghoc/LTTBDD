@@ -1,0 +1,17 @@
+import 'dart:io';
+void main(){
+  double Tong=0;
+  List<double> DSTien=[];
+  while (true) {
+  stdout.write('Nhập số tiền (hoặc "end" để kết thúc): ');
+  String input = stdin.readLineSync()!;
+  if (input == 'end') {
+    break;
+  } else {
+    double Tien = double.tryParse(input) ?? 0;
+    DSTien.add(Tien);
+    Tong=Tong + Tien;
+  }
+  }  
+  print("Tổng số tiên: ${Tong}");
+  }

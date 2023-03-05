@@ -1,0 +1,7 @@
+void main() {
+  Set<String> fruits = {'Táo', 'Chuối', 'Ổi', 'Xoài'};
+
+  for (String fruit in fruits) {
+    print(fruit);
+  }
+}

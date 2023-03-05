@@ -1,0 +1,11 @@
+void main() {
+  Map<String, dynamic> nguoi = {
+    'name': 'Cong',
+    'address': 'Hai An, Hai Phong',
+    'age':21,
+    'country': 'Trung Quoc',
+  };
+
+  nguoi['country'] = 'Viet Nam';
+  nguoi.forEach((key, value) => print('$key: $value'));
+}

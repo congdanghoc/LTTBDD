@@ -1,0 +1,13 @@
+void main() {
+  Map<String, String> DS = {
+    'Cong': '0333-475-400',
+    'Duy': '0123-456-798',
+    'Linh': '0123-456-798',
+    'An': '0123-456-798',
+  };
+
+  Iterable<String> keysWithLength4 =
+      DS.keys.where((key) => key.length == 4);
+  print('Nguoi co 4 ki tu la:');
+  keysWithLength4.forEach((key) => print(key));
+}

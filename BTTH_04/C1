@@ -1,4 +1,4 @@
 void main(){
-    List<String> names =["Cong","Duy","Son","Vu"];
-    print(names);
+  List<String> names=["Cong","Duy","Vu"];
+  print(names);
 }

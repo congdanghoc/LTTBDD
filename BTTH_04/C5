@@ -1,0 +1,5 @@
+void main() {
+  List<String> friends = ['Lan','Thao', 'An', 'Duy', 'Cong', 'Minh', 'Vy'];  
+  var aName = friends.where((name) => name.toLowerCase().startsWith('a')).first;
+  print('Tên bắt đầu với chữ "a": $aName');
+}
