@@ -1,0 +1,19 @@
+class House {
+  int id;
+  String name;
+  double prize;
+  House(this.id, this.name, this.prize);
+  @override
+  String toString() {
+    return 'House: id=$id, name=$name, prize=$prize';
+  }
+}
+void main() {
+  House house1 = House(1, 'Small House', 1000000000);
+  House house2 = House(2, 'Medium House', 5000000000);
+  House house3 = House(3, 'Big House', 1000000000);
+  List<House> houses = [house1, house2, house3];
+  houses.forEach((house) => print(house));
+}
+
+

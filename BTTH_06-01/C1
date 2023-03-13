@@ -1,0 +1,20 @@
+class Laptop {
+  int id;
+  String name;
+  int ram;
+  Laptop(this.id, this.name, this.ram);
+  void printDetails() {
+    print('ID: $id, Name: $name, RAM: $ram GB');
+  }
+}
+
+void main() {
+  List<Laptop> laptops = [
+    Laptop(1, 'Dell XPS', 16),
+    Laptop(2, 'MacBook Pro', 16),
+    Laptop(3, 'Asus Vivobook', 8),
+  ];
+  for (var laptop in laptops) {
+    laptop.printDetails();
+  }
+}
