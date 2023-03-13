@@ -1,0 +1,5 @@
+import 'dart:io';
+void main(){
+  File file = File('Hello.txt');
+  file.writeAsStringSync('\nDuy',mode: FileMode.append);
+}

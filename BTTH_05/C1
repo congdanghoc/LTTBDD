@@ -1,0 +1,7 @@
+import 'dart:io';
+void main(){
+  File file = File('Hello.txt');
+  file.writeAsStringSync('Công');
+  String str= file.readAsStringSync();
+  print(str);
+}

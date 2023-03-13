@@ -1,0 +1,6 @@
+import 'dart:io';
+
+void main() {
+  Directory currentDirectory = Directory.current;
+  print("Thư mục làm việc hiện tại: ${currentDirectory.path}");
+}

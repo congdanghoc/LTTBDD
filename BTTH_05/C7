@@ -1,0 +1,47 @@
+import 'dart:io';
+
+void main() {
+  List<Map<String, dynamic>> students = [];
+  addStudent(students);
+  addStudent(students);
+  saveToCsv(students);
+  List<Map<String, dynamic>> readStudents = readFromCsv();
+  print(readStudents);
+}
+void addStudent(List<Map<String, dynamic>> students) {
+  print('Nhap ten sinh vien:');
+  String name = stdin.readLineSync()!;
+  print('Nhap tuoi:');
+  int age = int.parse(stdin.readLineSync()!);
+  print('Nhap dia chi:');
+  String address = stdin.readLineSync()!;
+  students.add({
+    'name': name,
+    'age': age,
+    'address': address,
+  });
+}
+void saveToCsv(List<Map<String, dynamic>> students) {
+   final csvFile = File('students.csv').openWrite();
+  csvFile.writeln('name,age,address');
+  for (var student in students) {
+    csvFile.writeln('${student['name']},${student['age']},${student['address']}');
+  }
+  csvFile.close();
+}
+List<Map<String, dynamic>> readFromCsv() {
+ final csvFile = File('students.csv').openRead();
+String header = csvFile.readLineSync()!;
+  List<Map<String, dynamic>> students = [];
+  while (!csvFile.done) {
+    String line = csvFile.readLineSync()!;
+    List<String> parts = line.split(',');
+    students.add({
+      'name': parts[0],
+      'age': int.parse(parts[1]),
+      'address': parts[2],
+    });
+  }
+  csvFile.close();
+  return students;
+}

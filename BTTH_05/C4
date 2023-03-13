@@ -1,0 +1,7 @@
+import 'dart:io';
+
+void main() {
+  File file1 = File('Hello.txt');
+  File file2 = File('Hello_copy.txt');
+  file1.copySync(file2.path);
+}
